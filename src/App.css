@@ -1,0 +1,10 @@
+.container{
+  background-color:blanchedalmond;
+  margin: 50px;
+  border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
