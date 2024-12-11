@@ -136,23 +136,6 @@ function Home() {
   };
 
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const querySnapshot = await getDocs(collection(db, 'website'));
-  //       console.log("this is query snapshot" + querySnapshot.docs)
-  //       const websitesList = querySnapshot.docs.map(doc => ({
-  //         id: doc.id,
-  //         ...doc.data()
-  //       }));
-  //       setWebsite(websitesList);
-  //     } catch (e) {
-  //       console.error("Error fetching documents: ", e);
-  //     }
-  //   };
-  
-  //   fetchData();
-  // }, []);
   
 
 
@@ -174,7 +157,14 @@ function Home() {
 
   return (
     <>
-      <div className="container">
+      <div className="hero">
+        <h1>
+      A<span id="www">www</span>esome Website
+        </h1>
+      </div>
+      <div className="maincontainer">
+      
+  
         {renderPeople()}
       </div>
       {user.email ? (
@@ -184,7 +174,7 @@ function Home() {
         </>
       ) : ''}
       <footer>
-        <a href="https://linktr.ee/developedbyjk" target="_blank"> @developedbyjk👨‍💻</a>
+       
       </footer>
     </>
   );

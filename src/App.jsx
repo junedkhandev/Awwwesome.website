@@ -2,7 +2,7 @@
 import Home from './Home.jsx'
 import {Routes,Route, BrowserRouter } from 'react-router-dom'
 import LoginPage from './LoginPage.jsx'
-import Test from './Test.jsx'
+
 
 function App(){
 
@@ -11,8 +11,7 @@ function App(){
       <BrowserRouter>
         <Routes>  
           <Route  path='/'  element={<Home/>}></Route>
-          <Route path='/login' element={<LoginPage/>}></Route>
-          <Route path='/test' element={<Test/>}></Route>
+          <Route path='/itsawesomewebsite' element={<LoginPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
