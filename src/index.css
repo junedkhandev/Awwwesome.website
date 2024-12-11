@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+body 
+{
+	/* background-color: #fff5bebd; */
+  /* background-color: #FEFBF6; */
+  background-color: #FFF8E3;
+    font-family: 'Space Mono', monospace;
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    /* display: block;
+    width: 90%;
+    margin:50px auto; */
+    display: flex; 
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.container a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.tile{
+  padding: 12px;
+  background-color: white;
+  margin: 1rem;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 5px;
+  border: 1px solid #7171714f;
+}
+.tile img{
+  padding: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid #7171714f;
+}
+
+.tile h4,p{
+    margin: 0;
+    color: rgba(0, 0, 0, 0.926);
+
+}
+.title p{
+  font-size: 0.5rem;
+  text-decoration: none
+}
+
+i{
+    opacity: 0.5;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  right: 0;;
+  font-weight: bolder;
+ 
+}
+footer a{
+  color: palevioletred;
+}
+
+#sign-in-with-google-btn{
+  margin: 50px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border: 1px solid #7171714f;
+  margin: 1rem;
+
+}
+#sign-in-with-google-btn img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+#delbtn{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: white;
+  color: white;
+  border: 1px solid black;
+  border-radius: 90px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#editbtn{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: white;
+  color: white;
+  border: 1px solid black;
+  border-radius: 90px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#signoutbtn , #addbtn {
+  position: absolute;
+ 
+ 
+  color: black;
+  font-family: 'Space Mono', monospace;
+  font-weight: 600;
+  margin: 20px;
+ display: block;
+  height: 40px;
+  width: 100px;
+  padding: 12px;
+
+  background-color:gold;
+  border-radius: 90px;
+
+}
+#signoutbtn{
+  bottom: 20;
+  right: 0;
+}
+#addbtn{
+  bottom: 20;
+  left: 0;
+}
