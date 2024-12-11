@@ -42,22 +42,24 @@ function Home() {
     const websiteName = prompt("Enter the name of the website", website.name);
     const websiteLink = prompt("Enter the link of the website", website.link);
     const websiteDesc = prompt("Enter the description of the website", website.desc);
+    const websiteTag = prompt("Enter the Tag", website.tag);
 
-    if (websiteDesc !== null && websiteLink !== null && websiteName !== null) {
-      updatePostInDB(website.id, websiteName, websiteLink, websiteDesc);
+    if (websiteDesc !== null && websiteLink !== null && websiteName !== null && websiteTag !== null) {
+      updatePostInDB(website.id, websiteName, websiteLink, websiteDesc, websiteTag);
     } else {
       alert("Update cancelled or incomplete information provided.");
     }
   }
 
-  async function updatePostInDB(docID, websiteName, websiteLink, websiteDesc) {
+  async function updatePostInDB(docID, websiteName, websiteLink, websiteDesc, websiteTag) {
     console.log("Updating document with ID: ", docID);
     try {
       const postRef = doc(db, "website", docID);
       await updateDoc(postRef, {
         name: websiteName,
         link: websiteLink,
-        desc: websiteDesc
+        desc: websiteDesc,
+        tag: websiteTag
       });
       alert("Website updated successfully!");
     } catch (error) {
@@ -80,6 +82,7 @@ function Home() {
   const renderPeople = () => {
     return website.map(website => (
       <div className="container" key={website.id}>
+        <div className="tag">{website.tag}</div>
         <a href={website.link} target="_blank">
           <div className='tile'>
             <div className='icon'>
