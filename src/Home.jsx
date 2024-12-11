@@ -122,6 +122,8 @@ function Home() {
     const websiteName = prompt("Enter the name of the website");
     const websiteLink = prompt("Enter the link of the website");
     const websiteDesc = prompt("Enter the description of the website");
+    const websiteTag = prompt("Enter the Tag", website.tag);
+
 
     if (websiteName && websiteLink && websiteDesc) {
       try {
