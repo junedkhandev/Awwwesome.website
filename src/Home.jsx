@@ -14,9 +14,18 @@ import {
 function Home() {
   const [website, setWebsite] = useState([]);
   const [filteredWebsites, setFilteredWebsites] = useState([]);
+  console.log("filteredWebsites", filteredWebsites);
   const [user, setUser] = useState({});
+  console.log(user);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const navigate = useNavigate();
+
+
+  // const categoryarray = ["All", "AI", "Design", "Tools","Books","Productivity","Resources"]
+  // const [categoryarray, setCategoryarray] = useState(["All", "AI", "Design", "Tools","Books","Productivity","Resources"]);
+
+  const [categoryarray, setCategoryarray] = useState(["All", "AI", "Design", "Tools","Books","Productivity","Resources"]);
+
 
   const iconname = (arg) => {
     const myarg = arg
@@ -32,6 +41,7 @@ function Home() {
       .then(() => {
         console.log("User signed out successfully");
         navigate("/");
+        location.reload();
       })
       .catch((error) => {
         console.log("Error signing out:", error);
@@ -39,11 +49,13 @@ function Home() {
   };
 
   const handleCategoryChange = (category) => {
+    console.log("cliked catergory is  "+ category);
     setSelectedCategory(category);
     if (category === "All") {
       setFilteredWebsites(website);
     } else {
       const filtered = website.filter((site) => site.tag === category);
+      console.log("filtered>>>>>>>>>>> ", filtered);
       setFilteredWebsites(filtered);
     }
   };
@@ -128,11 +140,32 @@ function Home() {
     });
   }, []);
 
+  const [newsite, setNewsite] = useState({
+    name: "",
+    link: "",
+    desc: "",
+    tag: "",
+  });
+  console.log(newsite);
+
+  function handlechange(e) {
+    setNewsite((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }
+
+
   const addtodatabse = async () => {
-    const websiteName = prompt("Enter the name of the website");
-    const websiteLink = prompt("Enter the link of the website");
-    const websiteDesc = prompt("Enter the description of the website");
-    const websiteTag = prompt("Enter the Tag");
+    // const websiteName = prompt("Enter the name of the website");
+    // const websiteLink = prompt("Enter the link of the website");
+    // const websiteDesc = prompt("Enter the description of the website");
+    // const websiteTag = prompt("Enter the Tag");
+
+    const websiteName = newsite.name;
+    const websiteLink = newsite.link;
+    const websiteDesc = newsite.desc;
+    const websiteTag = newsite.tag;
 
     if (websiteName && websiteLink && websiteDesc && websiteTag) {
       try {
@@ -161,47 +194,134 @@ function Home() {
     return () => unsubscribe();
   }, []);
 
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, "categories"), (snapshot) => {
+      const categories = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setCategoriesList(categories);
+    
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+
+  
+
+
+  const [category, setCategory] = useState({
+    name: "",
+    emoji: "",
+  });
+  
+  const [categoriesList, setCategoriesList] = useState([]);
+  
+  console.log(categoriesList);
+  const addcategorytodb = async () => {
+    // const category = prompt("Enter the name of the category");
+    
+    if (category) {
+      try {
+        await addDoc(collection(db, "categories"), {
+          name: category.name,
+          emoji: category.emoji,
+         
+        });
+        alert("Category added successfully!");
+        setCategory("");
+        // setCategoryarray([...categoryarray, category]);
+        
+
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+  }
+ 
   return (
     <>
-      <div className="hero">
+    <div className="dadacontainer">
+    {
+      user.email && <div className="adminpanel">
+      <input type="text" placeholder="website name" name="name" value={newsite.name} onChange={handlechange} />
+      <input type="text" placeholder="website link"  name="link" value={newsite.link} onChange={handlechange}/>
+      <textarea placeholder="website description" name="desc" value={newsite.desc} onChange={handlechange}/>
+
+      <select  id="categories" name="tag" value={newsite.tag} onChange={handlechange}>
+        {/* <option value="Ai">ai</option>
+        <option value="ci">ci</option> */}
+        {
+          categoriesList.map((category) => {
+            return <option key={category.id} value={category.name}>{category.emoji}{category.name}</option>
+          
+          })
+        }
+      </select>
+
+            <div> 
+            <button onClick={addtodatabse}>Add</button>    
+            <button  onClick={handleSignOut}>Sign Out </button>
+            </div>
+
+            
+            <div>
+            <input type="text" placeholder="add emoji" value={category.emoji} onChange={(e) =>  setCategory(prev => ({ ...prev, emoji: e.target.value }))}/>
+            <input type="text" placeholder="add category" value={category.name} onChange={(e) => setCategory(prev => ({...prev, name: e.target.value}))}/>
+            <button  onClick={addcategorytodb}>+</button>
+            </div>
+          
+     </div>
+    }
+      
+    <div className="baapcontainer">
+
+    {/* style={{
+      marginLeft: "350px",
+      backgroundColor: "black",
+    }}> */}
+
+   
+
+      <div className="hero" >
         <h1>
           A<span id="www">www</span>esome Website
         </h1>
       </div>
       <div className="category-buttons">
-        {["All", "AI", "Design", "Tools"].map((category) => (
+        
+        {categoriesList.map((category) => (
           <>
           <div className="buttoncontainer">
 
           <button
-            key={category}
-            className={`category-btn ${selectedCategory === category ? "active" : ""}`}
-            onClick={() => handleCategoryChange(category)}
+            key={category.id}
+            className={`category-btn ${selectedCategory === category.name ? "active" : ""}`}
+            onClick={() => handleCategoryChange(category.name)}
             >
-            {category}
+              {category.emoji}
+            {category.name}
           </button>
           {/* <p id="totalnumberofwebsites"> 123</p> */}
               <p id="totalnumberofwebsites">
-                {category === "All"
+                {category.name === "All"
                   ? website.length
-                  : website.filter((site) => site.tag === category).length}
+                  : website.filter((site) => {
+                    const emojifilteredname = category.name;
+                    const sitetag = site.tag;
+                    return sitetag === emojifilteredname;
+                    }).length}
               </p>
 
               </div>
             </>
         ))}
       </div>
-      <div className="maincontainer">{renderWebsites()}</div>
-      {user.email && (
-        <>
-          <button id="signoutbtn" onClick={handleSignOut}>
-            Sign Out
-          </button>
-          <button id="addbtn" onClick={addtodatabse}>
-            Add
-          </button>
-        </>
-      )}
+        <div className="maincontainer">{renderWebsites()}</div>
+      </div>
+    </div>
+     
     </>
   );
 }

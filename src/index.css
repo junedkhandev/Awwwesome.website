@@ -19,6 +19,7 @@ body
     height: 20vh;
     background-color:white;
     margin: 50px;
+ width: 1000px;
     border-radius: 20px;
     background-color: rgb(21, 21, 21);
     border: 1px solid #7171714f;
@@ -44,6 +45,7 @@ body
   justify-content: center;
   align-items: center;
   margin: 10px 100px;
+  background-color: blue;
 }
 .container{
     /* display: block;
@@ -175,9 +177,7 @@ border: 0px;
   cursor: pointer;
 }
 
-#signoutbtn , #addbtn {
-  position: absolute;
- 
+/* #signoutbtn , #addbtn {
  
   color: black;
   font-family: 'Space Mono', monospace;
@@ -192,15 +192,8 @@ border: 0px;
   background-color:gold;
   border-radius: 90px;
 
-}
-#signoutbtn{
-  bottom: 20;
-  right: 0;
-}
-#addbtn{
-  bottom: 20;
-  left: 0;
-}
+} */
+
 
 .category-buttons{
   position: relative;
@@ -228,7 +221,25 @@ border: 0px;
 }
 .buttoncontainer{
   position: relative;
+
 }
+.baapcontainer{
+  /* background-color: violet; */
+  /* width: 800px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dadacontainer{
+  display: flex;
+  /* background-color: tomato; */
+  align-items: center;
+  justify-content: center;
+}
+
+
 #totalnumberofwebsites{
   position: absolute;
   top:0px;
@@ -243,6 +254,27 @@ transform: translate(-50%, -50%);
   font-weight: 600;
 }
 
+.adminpanel{
+
+/* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding-top: 100px;
+  gap: 50px;
+  padding: 50px;
+  margin: 10px;
+  background-color: white;
+  font-family: 'Space Mono', monospace;
+
+}
+.adminpanel input{
+  padding: 15px;
+ 
+  border-radius: 5px;
+  border: 1px solid #7171714f;
+  outline: none;
+}
 @media only screen and (max-width:500px) {
  .hero{
   display: block;
