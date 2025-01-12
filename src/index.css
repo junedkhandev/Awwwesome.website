@@ -45,7 +45,7 @@ body
   justify-content: center;
   align-items: center;
   margin: 10px 100px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 .container{
     /* display: block;
@@ -132,6 +132,11 @@ footer{
   right: 0;;
   font-weight: bolder;
  
+}
+footer img{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 footer a{
   color: palevioletred;

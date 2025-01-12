@@ -295,6 +295,7 @@ function Home() {
           <>
           <div className="buttoncontainer">
 
+         
           <button
             key={category.id}
             className={`category-btn ${selectedCategory === category.name ? "active" : ""}`}
@@ -321,7 +322,11 @@ function Home() {
         <div className="maincontainer">{renderWebsites()}</div>
       </div>
     </div>
-     
+     <footer>
+      <a href="https://www.instagram.com/awwwesome.website/" target="_blank" rel="noreferrer">
+        <img src="https://icons.iconarchive.com/icons/fa-team/fontawesome-brands/512/FontAwesome-Brands-Instagram-icon.png" alt="instagram of awwwesome.website" />
+      </a>
+     </footer>
     </>
   );
 }
