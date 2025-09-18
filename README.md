@@ -10,3 +10,11 @@
 
 ## 📽️ Ai Video 
 - [omagic.ai](https://omagic.ai/)
+
+
+## 🦀 From Google
+- [notebook LM](https://notebooklm.google.com/)
+
+
+## 🩳 Ai Board
+- [Kuse ai](https://app.kuse.ai/)
