@@ -1,12 +1,12 @@
 # LIST OF AWESOME WEBSITE AROUND THE WEB 🌍
 
-## Tools ⚙️
+## ⚙️ Tools 
 - [privatebin](https://privatebin.net/)
 
 
-## Inspiration Profile ⚙️
+## 🎉 Inspiration Profile 
 - [shrutimishra](https://www.shrutimishra.co/)
 
 
-## Ai Video 📽️
+## 📽️ Ai Video 
 - [omagic.ai](https://omagic.ai/)
