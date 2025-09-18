@@ -4,7 +4,7 @@
 - [privatebin](https://privatebin.net/)
 
 ## 🗣️Ai voice
-- [Deepgram] (https://deepgram.com/) : AI speech to text and vice versa 
+- [Deepgram](https://deepgram.com/) : AI speech to text and vice versa 
 
 ## 🎉 Inspiration Profile 
 - [shrutimishra](https://www.shrutimishra.co/)
