@@ -23,3 +23,7 @@
 
 ## 🩳 Ai Board
 - [Kuse ai](https://app.kuse.ai/)
+
+## 🛫 AI Togerther/Comparision
+
+- [LMArena](https://lmarena.ai/) : compare different AI chat models in a "battle" format
