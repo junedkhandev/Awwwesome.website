@@ -3,6 +3,9 @@
 ## ⚙️ Tools 
 - [privatebin](https://privatebin.net/)
 
+## 🐟 AI Scrapping
+- [Capalyze](capalyze.ai) : AI-powered data collection and reporting tool.
+
 ## 🗣️Ai voice
 - [Deepgram](https://deepgram.com/) : AI speech to text and vice versa 
 
