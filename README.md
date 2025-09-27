@@ -32,3 +32,6 @@
 ## 🛫 AI Togerther/Comparision
 
 - [LMArena](https://lmarena.ai/) : compare different AI chat models in a "battle" format
+
+## ⭐ Interesting Site 
+- [Trump Card](https://trumpcard.gov/)
