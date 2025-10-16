@@ -2,8 +2,9 @@
 
 
 ## 🧪 to Experiment 
-https://openfiesta.app/
-https://www.niladri.tech/
+-https://openfiesta.app/
+-https://www.niladri.tech/
+-https://a16z.com/
 
 ## 📷 AI Suite (Image & Video)
 - [Imagine.art](https://www.imagine.art/) :AI creative suite for generating digital media
