@@ -1,5 +1,5 @@
 # LIST OF AWESOME WEBSITE AROUND THE WEB 🌍
-![visit](https://komarev.com/ghpvc/?username=junedkhandev&color=brightgreen)
+ ![](https://komarev.com/ghpvc/?username=junedkhandev&color=brightgreen)
 
 ## 🧪 to Experiment 
 - https://openfiesta.app/
