@@ -7,7 +7,7 @@
 
 ![](https://komarev.com/ghpvc/?junedkhandev&color=green)
 
-![](https://komarev.com/ghpvc/?username=junedkhandev)
+![](https://komarev.com/ghpvc/?username=junedkhandev&color=green)
 
 ## 🧪 to Experiment 
 - https://openfiesta.app/
