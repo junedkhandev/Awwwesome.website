@@ -25,6 +25,9 @@
 - [shrutimishra](https://www.shrutimishra.co/)
 -  https://helper.ai/
 
+## 🤖 ROBOTICS
+- https://www.figure.ai/
+- https://www.1x.tech/
 
 ## 📽️ Ai Video 
 - [omagic.ai](https://omagic.ai/)
