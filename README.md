@@ -5,6 +5,7 @@
 - https://openfiesta.app/
 - https://www.niladri.tech/
 - https://a16z.com/
+- https://www.bharatdigital.io/
 
 
 ## 📷 AI Suite (Image & Video)
