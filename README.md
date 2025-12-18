@@ -8,6 +8,8 @@
 - https://www.bharatdigital.io/
 - https://antiwork.com/
 
+## 📂 Softare
+- https://www.makingsoftware.com/
 
 ## 📷 AI Suite (Image & Video)
 - [Imagine.art](https://www.imagine.art/) :AI creative suite for generating digital media
