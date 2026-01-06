@@ -7,6 +7,7 @@
 - https://a16z.com/
 - https://www.bharatdigital.io/
 - https://antiwork.com/
+- -https://starface.world/
 
 ## 📂 Softare
 - https://www.makingsoftware.com/
